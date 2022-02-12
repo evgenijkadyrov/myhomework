@@ -1,35 +1,37 @@
 .someClass {
-
 }
+
 .button {
-flex:1;
+    flex: 1;
     border-radius: 3px;
-
 }
-.wrapper {
-    width:350px;
 
+.wrapper {
+    width: 350px;
     padding-bottom: 5px;
 }
-.item{
+
+.item {
     font-size: 18px;
     font-weight: bold;
 }
+
 .name {
     flex: 4;
     margin-left: 15px;
+}
 
+.priority {
+    flex: 4;
 }
-.priority{
-flex:4;
-}
-.block{
+
+.block {
     display: flex;
-    width:100%;
+    width: 100%;
     flex-direction: row;
+}
 
-
-
-
-
+.filterButton {
+    margin: 5px 5px 0px 5px;
+    font-size: 14px;
 }
