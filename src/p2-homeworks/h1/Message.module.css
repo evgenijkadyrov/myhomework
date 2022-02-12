@@ -1,0 +1,40 @@
+.messageItem {
+    display: flex;
+    flex-direction: row;
+   justify-content: left;
+    align-items: end;
+    color:white;
+}
+.name{
+    font-size: 16px;
+    font-weight: bold;
+}
+.message {
+    word-wrap: break-word;
+}
+.arrow{
+    height: 20px;
+    width:20px;
+    background: radial-gradient(circle at top left, rgba(0,0,0,0),20px, rgba(95,158,160,100) 0);
+}
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+
+}
+.item {
+    float: left;
+    background: silver;
+    padding: 0.2em 0.8em;
+    border-radius: 1em 1em 1em 0em;
+    position: relative;
+    line-height: 1.5em;
+    background-color: #5f9ea0;
+}
+.data{
+    display: flex;
+    justify-content: flex-end;
+    opacity: 0.3;
+}
+
