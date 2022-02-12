@@ -1,0 +1,35 @@
+.someClass {
+
+}
+.button {
+flex:1;
+    border-radius: 3px;
+
+}
+.wrapper {
+    width:350px;
+
+    padding-bottom: 5px;
+}
+.item{
+    font-size: 18px;
+    font-weight: bold;
+}
+.name {
+    flex: 4;
+    margin-left: 15px;
+
+}
+.priority{
+flex:4;
+}
+.block{
+    display: flex;
+    width:100%;
+    flex-direction: row;
+
+
+
+
+
+}
