@@ -1,0 +1,27 @@
+
+.classic {
+    background: #cad2d0;
+    width: 300px;
+    height: 20px;
+    border-radius: 5px;
+    padding-left: 5px;
+    margin-bottom: 5px;
+}
+
+::placeholder {
+    color: #74747b;
+}
+
+.classic:focus {
+    outline: none;
+}
+
+.errorInput {
+    background: #ee6549;
+    border-color: red;
+}
+
+.error {
+    color: #f10000;
+    margin-bottom: 5px;
+}

@@ -3,11 +3,12 @@ import Affair from './Affair'
 import {AffairType, FilterType} from './HW2'
 import s from './Affairs.module.css'
 import {Button} from "./Button";
+import SuperButton from "../h4/common/c2-SuperButton/SuperButton";
 
 export type AffairsPropsType = { // need to fix any
     data: AffairType[]
-    setFilter: (filter:FilterType)=>void
-    deleteAffairCallback: (_id:number)=>void
+    setFilter: (filter: FilterType) => void
+    deleteAffairCallback: (_id: number) => void
 }
 
 function Affairs(props: AffairsPropsType) {
@@ -19,21 +20,30 @@ function Affairs(props: AffairsPropsType) {
         />
     ))
 
-    const setAll = () => {props.setFilter('all')} // need to fix
-    const setHigh = () => {props.setFilter('high')}
-    const setMiddle = () => {props.setFilter('middle')}
-    const setLow = () => {props.setFilter('low')}
+    const setAll = () => {
+        props.setFilter('all')
+    } // need to fix
+    const setHigh = () => {
+        props.setFilter('high')
+    }
+    const setMiddle = () => {
+        props.setFilter('middle')
+    }
+    const setLow = () => {
+        props.setFilter('low')
+    }
 
     return (
         <div>
 
             {mappedAffairs}
-<Button name={'All'} callback={setAll}/>
-<Button name={'high'} callback={setHigh}/>
-<Button name={'middle'} callback={setMiddle}/>
-<Button name={'low'} callback={setLow}/>
 
-          {/*  <button className={s.filterButton} onClick={setAll}>All</button>
+            <Button name={'All'} callback={setAll}/>
+            <Button name={'high'} callback={setHigh}/>
+            <Button name={'middle'} callback={setMiddle}/>
+            <Button name={'low'} callback={setLow}/>
+
+            {/*  <button className={s.filterButton} onClick={setAll}>All</button>
             <button className={s.filterButton} onClick={setHigh}>High</button>
             <button className={s.filterButton} onClick={setMiddle}>Middle</button>
             <button className={s.filterButton} onClick={setLow}>Low</button>*/}
