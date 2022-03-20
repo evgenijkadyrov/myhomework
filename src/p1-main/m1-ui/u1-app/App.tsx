@@ -7,7 +7,6 @@ function App() {
     return (
         <div className={s.App}>
             <div>react homeworks:</div>
-
             <HW5/>
 
         </div>
