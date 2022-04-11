@@ -1,14 +1,21 @@
 const initState = {
-
+    preloading: false
 }
-
-export const loadingReducer = (state = initState, action: any): any => { // fix any
+type initStateType = typeof initState
+export const loadingReducer = (state: initStateType = initState, action: loadingAT): initStateType => { // fix any
     switch (action.type) {
-        case '': {
-            return state
+        case 'ACTIVATE-PRELOADER': {
+            return {...state, preloading: action.preloading}
         }
-        default: return state
+        default:
+            return state
     }
 }
+type loadingAT = {
+    type: 'ACTIVATE-PRELOADER',
+    preloading: boolean
+}
 
-export const loadingAC = (): any => {} // fix any
+export const loadingAC = (preloading: boolean): loadingAT => {
+    return {type: 'ACTIVATE-PRELOADER', preloading}
+} // fix any
