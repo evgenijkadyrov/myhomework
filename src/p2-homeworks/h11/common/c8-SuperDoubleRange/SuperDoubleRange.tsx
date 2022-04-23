@@ -1,4 +1,5 @@
 import React from 'react'
+import {Box, Slider} from "@mui/material";
 
 type SuperDoubleRangePropsType = {
     onChangeRange?: (value: [number, number]) => void
@@ -6,19 +7,27 @@ type SuperDoubleRangePropsType = {
     // min, max, step, disable, ...
 }
 
-const SuperDoubleRange: React.FC<SuperDoubleRangePropsType> = (
+export const SuperDoubleRange: React.FC<SuperDoubleRangePropsType> = (
     {
         onChangeRange, value,
         // min, max, step, disable, ...
     }
 ) => {
-    // сделать самому, можно подключать библиотеки
+    const [valueD, setValue] = React.useState<number[]>([20, 37]);
+
+    const handleChange = (event: Event, newValue: number | number[]) => {
+        setValue(newValue as number[]);
+    };
 
     return (
-        <>
-            DoubleRange
-        </>
-    )
-}
+        <Box sx={{ width: 300 }}>
+            <Slider
+                getAriaLabel={() => 'Temperature range'}
+                value={valueD}
+                onChange={handleChange}
+                valueLabelDisplay="auto"
 
-export default SuperDoubleRange
+            />
+        </Box>
+    );
+}
