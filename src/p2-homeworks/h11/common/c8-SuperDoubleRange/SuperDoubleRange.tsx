@@ -12,7 +12,7 @@ type SuperDoubleRangePropsType = {
 export const SuperDoubleRange: React.FC<SuperDoubleRangePropsType> = (
     {
         onChangeRange, value, max
-            }
+    }
 ) => {
 
     const handleChange = (event: Event, newValue: number | number[]) => {
