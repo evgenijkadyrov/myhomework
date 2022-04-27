@@ -17,6 +17,8 @@ export const SuperDoubleRange: React.FC<SuperDoubleRangePropsType> = (
 
     const handleChange = (event: Event, newValue: number | number[]) => {
         setValue(newValue as number[]);
+        //@ts-ignore
+        onChangeRange(valueD)
     };
 
     return (
