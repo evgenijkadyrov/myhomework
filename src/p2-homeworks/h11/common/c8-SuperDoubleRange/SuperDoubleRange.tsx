@@ -1,29 +1,30 @@
 import React from 'react'
 import {Box, Slider} from "@mui/material";
 
+
 type SuperDoubleRangePropsType = {
     onChangeRange?: (value: [number, number]) => void
     value?: [number, number]
-    // min, max, step, disable, ...
+    max: number
+
 }
 
 export const SuperDoubleRange: React.FC<SuperDoubleRangePropsType> = (
     {
-        onChangeRange, value,
-        // min, max, step, disable, ...
-    }
+        onChangeRange, value, max
+            }
 ) => {
-    const [valueD, setValue] = React.useState<number[]>([20, 37]);
 
     const handleChange = (event: Event, newValue: number | number[]) => {
-        setValue(newValue as number[]);
+        //@ts-ignore
+        onChangeRange(newValue as number[])
     };
 
     return (
-        <Box sx={{ width: 300 }}>
+        <Box sx={{width: 300}}>
             <Slider
-                getAriaLabel={() => 'Temperature range'}
-                value={valueD}
+                max={max}
+                value={value}
                 onChange={handleChange}
                 valueLabelDisplay="auto"
 
