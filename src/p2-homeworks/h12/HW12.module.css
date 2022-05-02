@@ -21,3 +21,12 @@
 .some-text {
     color: darkslateblue;
 }
+.myself {
+    background: #3faffa;
+}
+
+.myself-text {
+    color: #f9f9f9;
+    font-style: italic;
+    font-size: 20px;
+}

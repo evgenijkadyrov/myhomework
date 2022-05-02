@@ -27,7 +27,7 @@ function HW11() {
                 <SuperRange onChangeRange={changeValue} value={value1} max={max2}
                 />
             </div>
-            <input value={max2} onChange={changeMaxSet}/>
+            <input value={max2} onChange={changeMaxSet}/><span> max value</span>
             <div>
                 <span>{value1}</span>
                 <SuperDoubleRange onChangeRange={changeDValue} value={[value1, value2]} max={max2}

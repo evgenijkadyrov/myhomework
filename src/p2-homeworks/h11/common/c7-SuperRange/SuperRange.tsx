@@ -36,7 +36,6 @@ max,
                 className={finalRangeClassName}
                 max={max}
 
-
                 {...restProps} // отдаём инпуту остальные пропсы если они есть (value например там внутри)
             />
 
